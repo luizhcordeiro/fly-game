@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Jogo Mata Mosca - game </title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="game.js"></script>
+</head>
+<body onresize="adjustSize()">
+
+	<div class="panel">
+		<div class="life">
+			<img id="l1" src="img/full-heart.png">
+			<img id="l2" src="img/full-heart.png">
+			<img id="l3" src="img/full-heart.png">
+		</div>
+		<div class="stopwatch"> Tempo restante: <span id="gameTime"></span> </div>
+	</div>
+
+	<script>
+		document.getElementById('gameTime').innerHTML = time
+
+		var flyOn = setInterval(function() {
+			dinamicImg()
+		}, timeFlyCreate)
+	</script>
+</body>
+</html>
